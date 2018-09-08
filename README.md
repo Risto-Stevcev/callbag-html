@@ -39,7 +39,6 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 - **tagName** `String` - An HTMLElement tag name
 - **innerText** `String` - The innerText of the element
 
-<br>
 
 #### `h[tagName]([children])`
 
@@ -49,7 +48,6 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 - **children** `Array[HTMLElement|Stream[HTMLElement]]` - An array where each element can be an 
   HTMLElement or a callbag stream of an HTMLElement
 
-<br>
 
 #### `h[tagName]([children$])`
 
@@ -59,7 +57,6 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 - **children$** `Stream[Array[HTMLElement|Stream[HTMLElement]]]` - A callbag stream of an array where each element can be an 
   HTMLElement or a callbag stream of an HTMLElement
 
-<br>
 
 #### `h[tagName]([properties], [innerText])`
 
@@ -69,7 +66,6 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 - **properties** `Object` - An object with property/value pairs
 - **innerText** `String` - The innerText of the element
 
-<br>
 
 #### `h[tagName]([properties], [children])`
 
@@ -80,7 +76,6 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 - **children** `Array[HTMLElement|Stream[HTMLElement]]` - An array where each element can be an 
   HTMLElement or a callbag stream of an HTMLElement
 
-<br>
 
 #### `h[tagName]([properties], [children$])`
 
@@ -106,3 +101,8 @@ Returns an [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLEl
 ## Tests
 
 Run `npm run watch` to generate the test bundle, served by default on `localhost:1234`
+
+
+## License
+
+See LICENSE
