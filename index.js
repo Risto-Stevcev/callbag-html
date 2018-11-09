@@ -34,13 +34,20 @@ const setAttribute = (element, key) => value => {
     case 'id': element.id = value ;break
     case 'className': element.className = value ;break
     case 'classSet':
-      element.className += ' ' + Object.entries(value)
-        .reduce(([className, isIncluded]) => isIncluded ? className : '')
-        .join(' ') ;break
+      element.className = [element.className.trim()].concat(
+        Object.entries(value)
+          .map(([className, isIncluded]) => isIncluded ? className : '')
+      ).filter(e => !!e).join(' ') ;break
+    case 'dataset':
+      Object.entries(value).forEach(([key, value]) => {
+        element.dataset[key] = value
+      }) ;break
     case 'style':
       Object.entries(value).forEach(([property, value]) => {
         element.style[property] = value
       }) ;break
+    case 'contentEditable':
+      element.contentEditable = value ? 'true' : 'false' ;break
     default:
       element[key] = value
   }
